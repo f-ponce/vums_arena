@@ -1,0 +1,15 @@
+<launch>
+    <!-- <include file="$(find vums_arena)/launch/logging_vums_arena.launch" /> -->
+    <!-- <arg name="config" default="$(find vums_arena)/nodes/vums_arena_param.yaml" /> -->
+
+    <rosparam command="load" file="$(arg config)" ns="vums_arena"/>
+    <node pkg="vums_arena" name="vums_arena" type="vums_arena_node.py">
+
+    </node>
+
+    <include file="$(find Kinefly)/launch/vums_rig/vums_logging.launch"  ns="kinefly" />
+
+    <!-- <include file="$(find vums_arena)/launch/panels.launch" /> -->
+
+
+</launch>

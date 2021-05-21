@@ -1,0 +1,46 @@
+angle_framerate: 30.0
+
+angle_lowpass_fcut: 10.0
+
+panels_config_id: 0
+
+panels_default:
+  pattern_table:
+  - - [-22.5, 0]
+    - 11
+  - - [0, 22.5]
+    - 11
+  - - [22.5, 67.5]
+    - 10
+  - - [67.5, 112.5]
+    - 12
+  - - [112.5, 157.5]
+    - 16
+  - - [157.5, 180.0]
+    - 15
+  - - [-180.0, -157.5]
+    - 15
+  - - [-157.5, -112.5]
+    - 13
+  - - [-112.5, -67.5]
+    - 14
+  - - [-67.5, -22.5]
+    - 9
+
+randomization: {enabled: false}
+
+rolling_mean_size: 1800
+
+rolling_angvelo_size: 90
+
+startup_delay: 0.0
+
+trials:
+- duration: 10.0
+  name: type01
+  panels: {bias_x: 0.0, bias_y: 0.0, gain_x: 10.0, gain_y: 0.0, mode: fixed_pattern,
+    nostop: true, pattern_id: 1}
+
+update_rate: 40.0
+
+wait_for_param_sub: true
